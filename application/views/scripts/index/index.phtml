@@ -1,0 +1,10 @@
+<h3>Usuários que cadastraram 2 ou mais produtos</h3>
+<?php foreach($this->usersByQtdProduct as $user): ?>
+<p><?php echo $user->name; ?> cadastrou <?php echo $user->product_per_user; ?> produtos</p>
+<?php endforeach; ?>
+
+<h3>Detalhando um pedido com quantidade de itens</h3>
+<p>Usuário: <?php echo $this->pedido_user->name; ?>, Data do pedido: <?php echo $this->pedido->create_date; ?></p>
+<?php foreach($this->pedido_itens as $item): ?>
+<p>Produto: <?php echo $item->name; ?> - Quantidade: <?php echo $item->amount; ?></p>
+<?php endforeach; ?>
